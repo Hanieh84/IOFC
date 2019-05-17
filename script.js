@@ -17,7 +17,6 @@ $('#DropDownLeft').change(function () {
         case "Farsi":
             converterFileLeft("Files/TLFTFarsi.txt");
             $("#headerLeft").text("داستان های افسانه ای فراموش شده از جن و پری");
-
             break;
         case "Japanese":
             converterFileLeft("Files/TLFTJapanese.txt");
@@ -55,10 +54,17 @@ $('#DropDownLeft').change(function () {
             converterFileLeft("Files/TLFTFrench.txt");
             $("#headerLeft").text("Les Contes de Fées Perdus");
             break;
-
-
         default:
             console.log("no choises");
+    }
+
+    if(selectedText == "Arabic" || selectedText == "Farsi" || selectedText == "Pashto" ){
+        $("#resultTextLeft").addClass( "text-right" );
+        $("#headerLeft").addClass( "text-right" );
+    }
+    else {
+        $("#resultTextLeft").removeClass( "text-right" );
+        $("#headerLeft").removeClass( "text-right" );
     }
 });
 
@@ -91,7 +97,7 @@ $('#DropDownRight').change(function () {
             $("#headerRight").text("ورک شوي خاپیری قصي");
             break;
         case "English":
-            converterFileRight("Files/text.txt");
+            converterFileRight("Files/TLFTEnglish.txt");
             $("#headerRight").text("The Lost Fairy Tales");
             break;
         case "Chinese":
@@ -99,7 +105,7 @@ $('#DropDownRight').change(function () {
             $("#headerRight").text("失落的童话故事");
             break;
         case "Russian":
-            cconverterFileRight("Files/TLFTRussian.txt");
+            converterFileRight("Files/TLFTRussian.txt");
             $("#headerRight").text("Потерянные сказки");
             break;
         case "Somali":
@@ -122,9 +128,18 @@ $('#DropDownRight').change(function () {
             console.log("no choises");
     }
 
+    if(selectedText == "Arabic" || selectedText == "Farsi" || selectedText == "Pashto" ){
+        $("#resultTextRight").addClass( "text-right" );
+        $("#headerRight").addClass( "text-right" );
+    }
+    else {
+        $("#resultTextRight").removeClass( "text-right" );
+        $("#headerRight").removeClass( "text-right" );
+    }
 });
 
 function converterFileLeft(input) {
+
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", input, false);
     rawFile.onreadystatechange = function () {
@@ -149,3 +164,30 @@ function converterFileRight(input) {
     }
     rawFile.send(null);
 }
+
+
+
+$(document).ready(function() {
+
+    $('#selection').on('change', function() {
+        change($(this).val());
+    });
+
+});
+
+
+function change(sourceUrl) {
+    var audio = document.getElementById("player");
+    var source = document.getElementById("mp3_src");
+
+    audio.pause();
+
+    if (sourceUrl) {
+        source.src = sourceUrl;
+        audio.load();
+        audio.play();
+    }
+}
+
+
+
