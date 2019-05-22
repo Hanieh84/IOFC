@@ -26,147 +26,205 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+
 </head>
 <body>
-<div class="header">
-    <h1>Nik Dee</h1>
-    <p>The Lost Fairy Tales</p>
-</div>
-
-
 <div class="container">
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <div class="top-container">
-                        <div class="text-left">
-                            <h5 id="headerLeft"></h5>
+    <div class="content">
+        <div class="header">
+
+
+            <img src="image/HeaderImage.png" id="hImage" alt="Nik Dee">
+
+
+        </div>
+
+        <br>
+
+        <br>
+        <div id="text-carousel" class="carousel slide" data-ride="carousel">
+            <!-- Wrapper for slides -->
+            <div class="row">
+                <div class="col-xs-offset-3 col-xs-6">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="carousel-content">
+                                <div>
+                                    <p>
+                                        <em>The Lost Fairy Tales are Swedish stories collected from the turn of
+                                            twentieth century.<br>The theme of this selection is "Leaving
+                                            home- conquering the world".<br>There is a clear connection here to the tail
+                                            of
+                                            the great emigration to America.<br>
+                                            As new waves of migrant bodies keep coming, language is key for settling in.<br>These
+                                            stories has been translated to the current main migrant languages in
+                                            Sweden<br>as well as to the major global
+                                            languages. <br>This to be read/listened
+                                            to side by side as a linguistic tool for learning a new<br>languages or in
+                                            native language teaching.<br>
+                                            <b><i>Nik Dee</i></b></em>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="text-right">
-                            <select class="btn btn-secondary dropdown-toggle" id="DropDownLeft">
-                                <option selected="selected" value="0">Languages</option>
-                                <option value="1">English</option>
-                                <option value="2">Svenska</option>
-                                <option value="3">Pashto</option>
-                                <option value="4">Arabic</option>
-                                <option value="5">Russian</option>
-                                <option value="6">Farsi</option>
-                                <option value="7">Hindi</option>
-                                <option value="8">Somali</option>
-                                <option value="9">Spanish</option>
-                                <option value="10">Chinese</option>
-                                <option value="11">French</option>
-                                <option value="12">Japanese</option>
-                                <option value="18">German</option>
-                            </select>
+                        <div class="item">
+                            <div class="carousel-content">
+                                <div>
+                                    <p>
+                                        <em>De Glömda Sagorna är svenska berättelser samlade från tidigt
+                                            nittonhundratal.<br>Temat för denna samling är "Lämna hemmet o erövra
+                                            världen".<br>
+                                            Det finns en tydlig koppling till slutfasen av den stora svenska
+                                            utvandringen
+                                            till Amerika.<br>Nya vågor av migranter böljar fram och som alltid är
+                                            språk en nyckel till att skapa ett nytt hem.<br>Dessa berättelser har
+                                            översatts
+                                            till de nuvarande största immigrantspråken<br>i Sverige och till
+                                            de globalt största språken.<br>Detta att läsas / lyssnas till sida vid sida
+                                            som
+                                            ett språkverktyg för att<br>lära sig ett nytt språk såväl
+                                            som i modersmålsundervisning.<br>
+                                            <b><i>Nik Dee</i> </b></em>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <pre id="resultTextLeft" class="card-text divSize">
+                </div>
+            </div>
+            <!-- Controls --> <a class="left carousel-control" href="#text-carousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+            <a class="right carousel-control" href="#text-carousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+
+        </div>
+
+        <br>
+        <br>
+
+        <div class="audioPlayer">
+
+            <label for="selection">Listen:</label>
+            <select id="selection">
+                <option value="">- Select track -</option>
+                <option value="audio/english_01.mp3">English part 1</option>
+                <option value="audio/english_02.mp3">English part 2</option>
+                <option value="audio/english_03.mp3">English part 3</option>
+                <option value="audio/english_04.mp3">English part 4</option>
+                <option value="audio/english_05.mp3">English part 5</option>
+                <option value="audio/english_06.mp3">English part 6</option>
+                <option value="audio/english_07.mp3">English part 7</option>
+                <option value="audio/Swedish_01.mp3">Swedish part 1</option>
+                <option value="audio/Swedish_02.mp3">Swedish part 2</option>
+                <option value="audio/Swedish_03.mp3">Swedish part 3</option>
+                <option value="audio/Swedish_04.mp3">Swedish part 4</option>
+                <option value="audio/Swedish_05.mp3">Swedish part 5</option>
+                <option value="audio/Swedish_06.mp3">Swedish part 6</option>
+                <option value="audio/Swedish_07.mp3">Swedish part 7</option>
+            </select>
+
+            <br>
+            <br>
+            <audio id="player" controls="controls">
+                <source id="mp3_src" type="audio/mp3"/>
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="top-container">
+                            <div class="text-left">
+                                <h5 id="headerLeft"></h5>
+                            </div>
+                            <div class="text-right">
+                                <select class="btn btn-secondary dropdown-toggle" id="DropDownLeft">
+                                    <option selected="selected" value="0">Languages</option>
+                                    <option value="1">English</option>
+                                    <option value="2">Svenska</option>
+                                    <option value="3">Pashto</option>
+                                    <option value="4">Arabic</option>
+                                    <option value="5">Russian</option>
+                                    <option value="6">Farsi</option>
+                                    <option value="7">Hindi</option>
+                                    <option value="8">Somali</option>
+                                    <option value="9">Spanish</option>
+                                    <option value="10">Chinese</option>
+                                    <option value="11">French</option>
+                                    <option value="12">Japanese</option>
+                                    <option value="18">German</option>
+                                </select>
+                            </div>
+                        </div>
+                        <pre id="resultTextLeft" class="card-text resultText">
                     </pre>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <div class="top-container">
-                        <div class="text-left">
-                            <h5 id="headerRight"></h5>
-                        </div>
-                        <div class="text-right">
-                            <select class="btn btn-secondary dropdown-toggle" id="DropDownRight">
-                                <option selected="selected" value="0">Languages</option>
-                                <option value="1">English</option>
-                                <option value="2">Svenska</option>
-                                <option value="3">Pashto</option>
-                                <option value="4">Arabic</option>
-                                <option value="5">Russian</option>
-                                <option value="6">Farsi</option>
-                                <option value="7">Hindi</option>
-                                <option value="8">Somali</option>
-                                <option value="9">Spanish</option>
-                                <option value="10">Chinese</option>
-                                <option value="11">French</option>
-                                <option value="12">Japanese</option>
-                                <option value="18">German</option>
-                            </select>
-                        </div>
                     </div>
-                    <pre id="resultTextRight" class="card-text divSize"></pre>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="top-container">
+                            <div class="text-left">
+                                <h5 id="headerRight"></h5>
+                            </div>
+                            <div class="text-right">
+                                <select class="btn btn-secondary dropdown-toggle" id="DropDownRight">
+                                    <option selected="selected" value="0">Languages</option>
+                                    <option value="1">English</option>
+                                    <option value="2">Svenska</option>
+                                    <option value="3">Pashto</option>
+                                    <option value="4">Arabic</option>
+                                    <option value="5">Russian</option>
+                                    <option value="6">Farsi</option>
+                                    <option value="7">Hindi</option>
+                                    <option value="8">Somali</option>
+                                    <option value="9">Spanish</option>
+                                    <option value="10">Chinese</option>
+                                    <option value="11">French</option>
+                                    <option value="12">Japanese</option>
+                                    <option value="18">German</option>
+                                </select>
+                            </div>
+                        </div>
+                        <pre id="resultTextRight" class="card-text resultText"></pre>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <div class="cardB">
-        <img src="image/TheLost.jpeg" alt="TheLost" style="width:40%" class="center">
-        <h4>The Journey Begins</h4>
-        <p class="price">$19.99</p>
-        <p>Swedutainment Proudly Presents</p>
-        <p>
-            <button>Add to Cart</button>
-        </p>
-    </div>
-
-
-    <br>
-    <br>
-    <br>
-
-    <hr>
-    <div class="audioPlayer">
-
-        <label for="selection">Listen:</label>
-        <select id="selection">
-            <option value="">- Select track -</option>
-            <option value="audio/english_01.mp3">English part 1</option>
-            <option value="audio/english_02.mp3">English part 2</option>
-            <option value="audio/english_03.mp3">English part 3</option>
-            <option value="audio/english_04.mp3">English part 4</option>
-            <option value="audio/english_05.mp3">English part 5</option>
-            <option value="audio/english_06.mp3">English part 6</option>
-            <option value="audio/english_07.mp3">English part 7</option>
-            <option value="audio/Swedish_01.mp3">Swedish part 1</option>
-            <option value="audio/Swedish_02.mp3">Swedish part 2</option>
-            <option value="audio/Swedish_03.mp3">Swedish part 3</option>
-            <option value="audio/Swedish_04.mp3">Swedish part 4</option>
-            <option value="audio/Swedish_05.mp3">Swedish part 5</option>
-            <option value="audio/Swedish_06.mp3">Swedish part 6</option>
-            <option value="audio/Swedish_07.mp3">Swedish part 7</option>
-        </select>
         <br>
         <br>
-        <audio id="player" controls="controls">
-            <source id="mp3_src" type="audio/mp3"/>
-            Your browser does not support the audio element.
-        </audio>
+
+
+        <div class="cardB">
+            <img src="image/TheLost.jpeg" alt="TheLost" style="width:40%" class="center">
+            <h4>The Journey Begins</h4>
+            <p class="price">$19.99</p>
+            <p>Swedutainment Proudly Presents</p>
+            <p>
+                <button>Add to Cart</button>
+            </p>
+        </div>
+
+
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
 
+    <div class="footer">
+        <img src="image/FooterImage.png" id="fImage" alt="Nik Dee">
 
-</div>
-
-<div class="footer">
-    <h3>IOFC</h3>
+    </div>
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
 

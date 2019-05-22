@@ -58,13 +58,13 @@ $('#DropDownLeft').change(function () {
             console.log("no choises");
     }
 
-    if(selectedText == "Arabic" || selectedText == "Farsi" || selectedText == "Pashto" ){
-        $("#resultTextLeft").addClass( "text-right" );
-        $("#headerLeft").addClass( "text-right" );
+    if (selectedText == "Arabic" || selectedText == "Farsi" || selectedText == "Pashto") {
+        $("#resultTextLeft").addClass("text-right");
+        $("#headerLeft").addClass("text-right");
     }
     else {
-        $("#resultTextLeft").removeClass( "text-right" );
-        $("#headerLeft").removeClass( "text-right" );
+        $("#resultTextLeft").removeClass("text-right");
+        $("#headerLeft").removeClass("text-right");
     }
 });
 
@@ -128,13 +128,13 @@ $('#DropDownRight').change(function () {
             console.log("no choises");
     }
 
-    if(selectedText == "Arabic" || selectedText == "Farsi" || selectedText == "Pashto" ){
-        $("#resultTextRight").addClass( "text-right" );
-        $("#headerRight").addClass( "text-right" );
+    if (selectedText == "Arabic" || selectedText == "Farsi" || selectedText == "Pashto") {
+        $("#resultTextRight").addClass("text-right");
+        $("#headerRight").addClass("text-right");
     }
     else {
-        $("#resultTextRight").removeClass( "text-right" );
-        $("#headerRight").removeClass( "text-right" );
+        $("#resultTextRight").removeClass("text-right");
+        $("#headerRight").removeClass("text-right");
     }
 });
 
@@ -165,11 +165,18 @@ function converterFileRight(input) {
     rawFile.send(null);
 }
 
+$('#resultTextLeft').on('scroll', function () {
+    $('#resultTextRight').scrollTop($(this).scrollTop());
+});
+
+$('#resultTextRight').on('scroll', function () {
+    $('#resultTextLeft').scrollTop($(this).scrollTop());
+});
 
 
-$(document).ready(function() {
+$(document).ready(function () {
 
-    $('#selection').on('change', function() {
+    $('#selection').on('change', function () {
         change($(this).val());
     });
 
