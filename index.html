@@ -28,10 +28,15 @@
 
 
 </head>
+
+
 <body>
+
 <div class="container">
+
     <div class="content">
-        <div class="header">
+
+        <div class="page-header">
 
 
             <img src="image/HeaderImage.png" id="hImage" alt="Nik Dee">
@@ -39,66 +44,54 @@
 
         </div>
 
-        <br>
+        <div class="container">
+            <div id="carouselContent" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active text-center p-4">
+                        <p>
+                            <em>The Lost Fairy Tales are Swedish stories collected from the turn of
+                                twentieth century.<br>The theme of this selection is "Leaving
+                                home- conquering the world".<br>There is a clear connection here to the tail
+                                of
+                                the great emigration to America.<br>
+                                As new waves of migrant bodies keep coming, language is key for settling in.<br>These
+                                stories has been translated to the current main migrant languages in
+                                Sweden<br>as well as to the major global
+                                languages. <br>This to be read/listened
+                                to side by side as a linguistic tool for learning a new<br>languages or in
+                                native language teaching.<br>
+                                <b><i>Nik Dee</i></b></em>
+                        </p>
+                    </div>
+                    <div class="carousel-item text-center p-4">
 
-        <br>
-        <div id="text-carousel" class="carousel slide" data-ride="carousel">
-            <!-- Wrapper for slides -->
-            <div class="row">
-                <div class="col-xs-offset-3 col-xs-6">
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <div class="carousel-content">
-                                <div>
-                                    <p>
-                                        <em>The Lost Fairy Tales are Swedish stories collected from the turn of
-                                            twentieth century.<br>The theme of this selection is "Leaving
-                                            home- conquering the world".<br>There is a clear connection here to the tail
-                                            of
-                                            the great emigration to America.<br>
-                                            As new waves of migrant bodies keep coming, language is key for settling in.<br>These
-                                            stories has been translated to the current main migrant languages in
-                                            Sweden<br>as well as to the major global
-                                            languages. <br>This to be read/listened
-                                            to side by side as a linguistic tool for learning a new<br>languages or in
-                                            native language teaching.<br>
-                                            <b><i>Nik Dee</i></b></em>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="carousel-content">
-                                <div>
-                                    <p>
-                                        <em>De Glömda Sagorna är svenska berättelser samlade från tidigt
-                                            nittonhundratal.<br>Temat för denna samling är "Lämna hemmet o erövra
-                                            världen".<br>
-                                            Det finns en tydlig koppling till slutfasen av den stora svenska
-                                            utvandringen
-                                            till Amerika.<br>Nya vågor av migranter böljar fram och som alltid är
-                                            språk en nyckel till att skapa ett nytt hem.<br>Dessa berättelser har
-                                            översatts
-                                            till de nuvarande största immigrantspråken<br>i Sverige och till
-                                            de globalt största språken.<br>Detta att läsas / lyssnas till sida vid sida
-                                            som
-                                            ett språkverktyg för att<br>lära sig ett nytt språk såväl
-                                            som i modersmålsundervisning.<br>
-                                            <b><i>Nik Dee</i> </b></em>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        <p>
+                            <em>De Glömda Sagorna är svenska berättelser samlade från tidigt
+                                nittonhundratal.<br>Temat för denna samling är "Lämna hemmet o erövra
+                                världen".<br>
+                                Det finns en tydlig koppling till slutfasen av den stora svenska
+                                utvandringen
+                                till Amerika.<br>Nya vågor av migranter böljar fram och som alltid är
+                                språk en nyckel till att skapa ett nytt hem.<br>Dessa berättelser har
+                                översatts
+                                till de nuvarande största immigrantspråken<br>i Sverige och till
+                                de globalt största språken.<br>Detta att läsas / lyssnas till sida vid sida
+                                som
+                                ett språkverktyg för att<br>lära sig ett nytt språk såväl
+                                som i modersmålsundervisning.<br>
+                                <b><i>Nik Dee</i> </b></em>
+                        </p>
                     </div>
                 </div>
+                <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-            <!-- Controls --> <a class="left carousel-control" href="#text-carousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-            <a class="right carousel-control" href="#text-carousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
-
         </div>
 
         <br>
@@ -143,7 +136,7 @@
                     <div class="card-body">
                         <div class="top-container">
                             <div class="text-left">
-                                <h5 id="headerLeft"></h5>
+                                <h5 id="headerLeft" style="color: white"></h5>
                             </div>
                             <div class="text-right">
                                 <select class="btn btn-secondary dropdown-toggle" id="DropDownLeft">
@@ -174,7 +167,7 @@
                     <div class="card-body">
                         <div class="top-container">
                             <div class="text-left">
-                                <h5 id="headerRight"></h5>
+                                <h5 id="headerRight" style="color: white"></h5>
                             </div>
                             <div class="text-right">
                                 <select class="btn btn-secondary dropdown-toggle" id="DropDownRight">
@@ -195,7 +188,7 @@
                                 </select>
                             </div>
                         </div>
-                        <pre id="resultTextRight" class="card-text resultText"></pre>
+                        <pre id="resultTextRight" class="card-text resultText" style="background:papayawhip"></pre>
                     </div>
                 </div>
             </div>
@@ -204,26 +197,39 @@
         <br>
         <br>
 
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="cardB">
+                    <img src="image/TheLost.jpeg" alt="TheLost" style="width:40%" class="center">
+                    <h4>The Journey Begins</h4>
+                    <p class="price">$19.99</p>
+                    <p>Swedutainment Proudly Presents</p>
+                    <p>
+                        <button>Add to Cart</button>
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div>
+                    <img id="logo" src="image/logan.png" alt="logan">
 
-        <div class="cardB">
-            <img src="image/TheLost.jpeg" alt="TheLost" style="width:40%" class="center">
-            <h4>The Journey Begins</h4>
-            <p class="price">$19.99</p>
-            <p>Swedutainment Proudly Presents</p>
-            <p>
-                <button>Add to Cart</button>
-            </p>
+                    <p id="TextForlogo" class="card-text">
+                       Med stöd av (Länsstyrelsens logga) Tidiga Insatser för Asylsökande
+                    </p>
+                </div>
+            </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <div>
+            <div class="footer">
+                <img src="image/FooterImage.png" id="fImage" alt="Nik Dee">
 
-
-    </div>
-
-    <div class="footer">
-        <img src="image/FooterImage.png" id="fImage" alt="Nik Dee">
-
+            </div>
+        </div>
     </div>
 </div>
-
 <script src="script.js"></script>
 </body>
 </html>
