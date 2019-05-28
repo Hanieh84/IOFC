@@ -50,14 +50,16 @@ ul li {
 .cardB {
     box-shadow: 1px 5px 10px 1px rgba(5, 0, 0, 0.5);
     max-width: 300px;
-    margin-left: 115px;
+    margin-left: 110px;
     text-align: center;
     font-family: arial;
     position: relative;
+    margin-top: 40px;
+
 }
 
 .price {
-    color: dimgrey;
+    color: darkgreen;
     font-size: 20px;
 }
 
@@ -66,12 +68,13 @@ ul li {
     outline: 0;
     padding: 10px;
     margin: 15px;
-    color: white;
-    background-color: dimgrey;
+    color:white;
+    background-color: lightgrey;
     text-align: center;
     cursor: pointer;
     width: 50%;
-    font-size: 10px;
+    font-size: 15px;
+    
 }
 
 .cardB button:hover {
@@ -151,12 +154,18 @@ ul li {
     float: central;
     margin-bottom: auto;
     margin-top: 40px;
-    margin-left: 115px;
+    margin-left: 80px;
 }
 
 #TextForlogo {
-    margin-left: 75px;
+    margin-left: 20px;
     margin-top: 50px;
-    font-size: 15px;
+    font-size: 16px;
+
 
 }
+
+
+
+
+
